@@ -15,4 +15,15 @@ describe("@components/Stack", () =>{
         expect(stackTest).toBeDefined();
     });
 
+    it("It should have the correct background style", () => {
+        const background = "blue";
+
+        const { getByRole } = render(
+            <Stack role="stack" bgColor={`${background}`} />
+        )
+
+        const stackTest = getByRole("stack");
+        expect(stackTest).toHaveStyle(`background-color: ${background}`);
+    });
+
 });
