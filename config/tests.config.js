@@ -1,4 +1,4 @@
-module.exports = {
-    presets: ['@babel/preset-env', ['@babel/preset-react', { runtime: 'automatic' }], 'minify'],
-    plugins: ['@babel/plugin-transform-runtime']
-};
+import { configure } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+
+configure({ throwSuggestions: true });

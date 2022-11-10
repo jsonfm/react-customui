@@ -5,6 +5,7 @@ import Button from "./Button";
 describe("@components/Button", () =>{
 
     it("It should render the component", () => {
+
         const { getByRole } = render(
             <Button type="button"/>
         );
@@ -13,4 +14,5 @@ describe("@components/Button", () =>{
 
         expect(buttonTest).toBeDefined();
     });
+
 });
