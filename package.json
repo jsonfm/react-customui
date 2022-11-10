@@ -1,10 +1,15 @@
 {
-  "name": "curso-creacion-libreriaui",
+  "name": "react-customui",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a simple component UI library for React.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config ./config/jest.config.js"
+    "test": "jest --config ./config/jest.config.js",
+    "build": "NODE_ENV=production && rm -rf ./dist && mkdir dist && npx babel --config-file ./babel.config.js src/ --out-dir dist --copy-files --ignore '**/*.spec.js' --no-copy-ignored",
+    "release": "npm run build && npm publish",
+    "release:patch": "npm version patch && npm run release",
+    "release:minor": "npm version minor && npm run publish",
+    "release:major": "npm version major && npm run publish"
   },
   "keywords": [],
   "author": "",
