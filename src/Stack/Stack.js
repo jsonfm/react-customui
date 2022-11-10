@@ -42,7 +42,7 @@ Stack.propTypes = {
   heigth: PropTypes.string,
   bgColor: PropTypes.string,
   className: PropTypes.string,
-  gap: propTypes.PropTypes.string,
+  gap: PropTypes.string,
   flexDirection: PropTypes.oneOf(['column', 'column-reverse', 'row', 'row-reverse']),
   alignContent: PropTypes.oneOf(['center', "flex-start", 'flex-end', 'space-around', 'space-between', 'stretch']),
   alignItems: PropTypes.oneOf(['center', "flex-start", 'flex-end', 'stretch']),
