@@ -3,7 +3,7 @@ import { cx, css } from '@emotion/css'
 import { PropTypes } from 'prop-types'
 
 
-const Stack = (width, heigth, bgColor, flexDirection, alignContent, alignItems, justifyContent, gap) => css`
+const stackStyles = (width, heigth, bgColor, flexDirection, alignContent, alignItems, justifyContent, gap) => css`
   width: ${width || "100%"};
   height: ${heigth || "100%"};
   display: flex;
@@ -15,7 +15,7 @@ const Stack = (width, heigth, bgColor, flexDirection, alignContent, alignItems, 
   gap: ${gap};
 `
 
-const ContainerFlex = forwardRef((props, ref) => {
+const Stack = forwardRef((props, ref) => {
   const {
     className,
     width,
@@ -32,7 +32,7 @@ const ContainerFlex = forwardRef((props, ref) => {
     <section 
       ref={ref}
       {...otherProps}
-      className={ cx(ContainerFlexStyles(width, heigth, bgColor, flexDirection, alignContent, alignItems, justifyContent, gap), className) }
+      className={ cx(stackStyles(width, heigth, bgColor, flexDirection, alignContent, alignItems, justifyContent, gap), className) }
     />
   );
 });
