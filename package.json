@@ -11,8 +11,8 @@
     "release:minor": "npm version minor && npm run publish",
     "release:major": "npm version major && npm run publish"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["library-ui", "react", "platzi"],
+  "author": "Jason Francisco Macas Mora",
   "license": "ISC",
   "dependencies": {
     "@emotion/css": "^11.10.5"
